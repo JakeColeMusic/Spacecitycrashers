@@ -388,21 +388,70 @@
           <div class="show-day">18</div>
         </div>
         <div>
-          <div class="show-venue-name">Tin Roof BBQ</div>
-          <div class="show-details">6:00 PM – 9:00 PM &nbsp;·&nbsp; Houston, TX</div>
+<div id="shows-container"></div>
+
+<script>
+fetch('/data/shows.json')
+  .then(res => res.json())
+  .then(shows => {
+    const container = document.getElementById('shows-container');
+
+    shows.forEach(show => {
+      const date = new Date(show.date);
+      const month = date.toLocaleString('default', { month: 'short' });
+      const day = date.getDate();
+
+      const html = `
+        <div class="show-row">
+          <div class="show-date-block">
+            <div class="show-month">${month}</div>
+            <div class="show-day">${day}</div>
+          </div>
+          <div>
+            <div class="show-venue-name">${show.venue}</div>
+            <div class="show-details">${show.time} · ${show.city}</div>
+          </div>
+          <div class="show-badge">${show.badge}</div>
         </div>
-        <div class="show-badge">Free Show</div>
-      </div>
-      <div class="show-row">
-        <div class="show-date-block">
-          <div class="show-month">May</div>
-          <div class="show-day">2</div>
+      `;
+
+      container.innerHTML += html;
+    });
+  });
+</script>
         </div>
         <div>
-          <div class="show-venue-name">Bill's Cafe Crawfish Boil</div>
-          <div class="show-details">6:00 PM – 9:00 PM &nbsp;·&nbsp; Kingwood, TX</div>
+          <div id="shows-container"></div>
+
+<script>
+fetch('/data/shows.json')
+  .then(res => res.json())
+  .then(shows => {
+    const container = document.getElementById('shows-container');
+
+    shows.forEach(show => {
+      const date = new Date(show.date);
+      const month = date.toLocaleString('default', { month: 'short' });
+      const day = date.getDate();
+
+      const html = `
+        <div class="show-row">
+          <div class="show-date-block">
+            <div class="show-month">${month}</div>
+            <div class="show-day">${day}</div>
+          </div>
+          <div>
+            <div class="show-venue-name">${show.venue}</div>
+            <div class="show-details">${show.time} · ${show.city}</div>
+          </div>
+          <div class="show-badge">${show.badge}</div>
         </div>
-        <div class="show-badge">Free Show</div>
+      `;
+
+      container.innerHTML += html;
+    });
+  });
+</script>
       </div>
     </div>
   </section>
