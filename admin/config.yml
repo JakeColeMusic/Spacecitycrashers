@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: JakeColeMusic/Spacecitycrashers
+  name: JakeColeMusic
+  repo: Spacecitycrashers
   branch: main
 
 media_folder: "images/uploads"
