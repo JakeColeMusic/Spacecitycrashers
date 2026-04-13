@@ -5,14 +5,4 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-collections:
-  - name: "shows"
-    label: "Shows"
-    folder: "content/shows"
-    create: true
-    fields:
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Venue", name: "venue", widget: "string" }
-      - { label: "City", name: "city", widget: "string" }
-      - { label: "Time", name: "time", widget: "string" }
-      - { label: "Badge", name: "badge", widget: "string" }
+collections: []
