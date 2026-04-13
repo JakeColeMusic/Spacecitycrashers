@@ -1,1 +1,16 @@
-
+[
+  {
+    "date": "2026-04-18",
+    "venue": "Tin Roof BBQ",
+    "time": "6:00 PM – 9:00 PM",
+    "city": "Houston, TX",
+    "badge": "Free Show"
+  },
+  {
+    "date": "2026-05-02",
+    "venue": "Bill's Cafe Crawfish Boil",
+    "time": "6:00 PM – 9:00 PM",
+    "city": "Kingwood, TX",
+    "badge": "Free Show"
+  }
+]
